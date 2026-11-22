@@ -238,3 +238,6 @@ figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
 .member .portrait small.cap { position: relative; z-index: 1; background: rgba(19,19,21,.72); color: var(--on-dark); padding: 3px 8px; font-size: 11px; }
 .member .portrait .bands { z-index: 1; }
 .member .focus.muted { color: var(--muted); font-weight: 400; }
+.photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--paper-2); }
+.photo.wide img { aspect-ratio: 16 / 9; }
+.photo.tall img { aspect-ratio: 4 / 5; }
