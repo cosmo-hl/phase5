@@ -167,3 +167,14 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
   .tiles.row3 .tile:last-child { grid-column: 1 / -1; }
   .tiles.row3 .tile:last-child .img { aspect-ratio: 2 / 1; }
 }
+
+/* Logo-Abstimmung */
+.logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 44px); margin-top: clamp(36px, 5vw, 64px); }
+.logo-box { aspect-ratio: 3 / 2; background: var(--tile); display: flex; align-items: center; justify-content: center; padding: 12%; }
+.logo-box img { max-width: 100%; max-height: 100%; width: auto; height: auto; }
+.logo-card figcaption { font-size: 14px; color: var(--ink); margin-top: 14px; line-height: 1.5; letter-spacing: 0; }
+.logo-card .muted { font-size: 13px; }
+.logo-n { font-family: var(--serif); font-style: italic; font-size: 22px; margin-right: 6px; color: var(--muted); }
+ul.plain { padding-left: 1.1em; margin: 0 0 1.1em; }
+ul.plain li { margin-bottom: .5em; }
+@media (max-width: 640px) { .logos { grid-template-columns: 1fr; } }
