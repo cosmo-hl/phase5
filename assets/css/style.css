@@ -158,3 +158,5 @@ figcaption { font-size: 12px; color: var(--muted); margin-top: 10px; letter-spac
 @media (max-width: 760px) { .site-footer .cols { grid-template-columns: 1fr; } }
 
 .legal h2 { font-size: 30px; margin-top: 1.6em; }
+.hero h1.wm img { height: clamp(64px, 10vw, 140px); width: auto; }
+.hero h1.wm { margin-bottom: 14px; }
