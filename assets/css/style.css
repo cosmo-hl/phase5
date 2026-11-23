@@ -144,7 +144,8 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
 /* Startseite: Bild zuerst */
 .home-hero { padding: 0; }
 .wrap.wide { max-width: 1560px; }
-.hero-img img { width: 100%; height: calc(100vh - 96px); min-height: 420px; max-height: 1100px; object-fit: cover; background: var(--tile); }
+.home-hero { padding-top: clamp(8px, 2vw, 24px); }
+.hero-img img { width: 100%; height: 58vh; min-height: 320px; max-height: 640px; object-fit: cover; background: var(--tile); }
 .hero-img figcaption { text-align: right; }
 .home-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 6vw, 100px); align-items: end; padding-top: clamp(36px, 5vw, 64px); }
 .home-intro h1 { font-size: clamp(38px, 5.2vw, 84px); margin: 0; }
@@ -160,7 +161,7 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
 @media (max-width: 860px) { .home-sec .project { grid-template-columns: 1fr; } }
 @media (max-width: 760px) {
   .home-intro { grid-template-columns: 1fr; gap: 16px; }
-  .hero-img img { height: 70vh; min-height: 320px; }
+  .hero-img img { height: 46vh; min-height: 240px; }
   .home-intro p { justify-self: start; }
   .tiles.row3 { grid-template-columns: 1fr 1fr; }
   .tiles.row3 .tile:last-child { grid-column: 1 / -1; }
