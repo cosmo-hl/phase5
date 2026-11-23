@@ -143,10 +143,12 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
 
 /* Startseite: Bild zuerst */
 .home-hero { padding: 0; }
-.hero-img img { width: 100%; height: calc(100vh - 150px); min-height: 380px; max-height: 860px; object-fit: cover; background: var(--tile); }
+.wrap.wide { max-width: 1560px; }
+.hero-img img { width: 100%; height: calc(100vh - 96px); min-height: 420px; max-height: 1100px; object-fit: cover; background: var(--tile); }
 .hero-img figcaption { text-align: right; }
-.home-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(24px, 6vw, 100px); align-items: end; padding-top: clamp(36px, 5vw, 64px); }
-.home-intro h1 { font-size: clamp(36px, 4.6vw, 62px); margin: 0; }
+.home-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 6vw, 100px); align-items: end; padding-top: clamp(36px, 5vw, 64px); }
+.home-intro h1 { font-size: clamp(38px, 5.2vw, 84px); margin: 0; }
+.home-intro p { justify-self: end; }
 .home-intro p { margin: 0; color: var(--muted); max-width: 440px; }
 .home-sec { padding: clamp(64px, 8vw, 110px) 0 0; }
 .home-sec.last { padding-bottom: clamp(64px, 8vw, 110px); }
@@ -154,9 +156,12 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
 .sec-head .label { margin: 0; }
 .sec-head .more { margin: 0; }
 .tiles.row3 { grid-template-columns: repeat(3, 1fr); }
+.home-sec .project { grid-template-columns: 8fr 4fr; }
+@media (max-width: 860px) { .home-sec .project { grid-template-columns: 1fr; } }
 @media (max-width: 760px) {
   .home-intro { grid-template-columns: 1fr; gap: 16px; }
-  .hero-img img { height: 62vh; min-height: 300px; }
+  .hero-img img { height: 70vh; min-height: 320px; }
+  .home-intro p { justify-self: start; }
   .tiles.row3 { grid-template-columns: 1fr 1fr; }
   .tiles.row3 .tile:last-child { grid-column: 1 / -1; }
   .tiles.row3 .tile:last-child .img { aspect-ratio: 2 / 1; }
