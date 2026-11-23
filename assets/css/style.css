@@ -140,3 +140,24 @@ figcaption { font-size: 11px; letter-spacing: .04em; color: var(--muted); margin
 .site-footer a:hover { color: var(--ink); }
 
 .legal h2 { font-size: 28px; margin-top: 1.8em; }
+
+/* Startseite: Bild zuerst */
+.home-hero { padding: 0; }
+.hero-img img { width: 100%; height: calc(100vh - 150px); min-height: 380px; max-height: 860px; object-fit: cover; background: var(--tile); }
+.hero-img figcaption { text-align: right; }
+.home-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(24px, 6vw, 100px); align-items: end; padding-top: clamp(36px, 5vw, 64px); }
+.home-intro h1 { font-size: clamp(36px, 4.6vw, 62px); margin: 0; }
+.home-intro p { margin: 0; color: var(--muted); max-width: 440px; }
+.home-sec { padding: clamp(64px, 8vw, 110px) 0 0; }
+.home-sec.last { padding-bottom: clamp(64px, 8vw, 110px); }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-top: 1px solid var(--line); padding-top: 18px; margin-bottom: clamp(28px, 4vw, 48px); }
+.sec-head .label { margin: 0; }
+.sec-head .more { margin: 0; }
+.tiles.row3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 760px) {
+  .home-intro { grid-template-columns: 1fr; gap: 16px; }
+  .hero-img img { height: 62vh; min-height: 300px; }
+  .tiles.row3 { grid-template-columns: 1fr 1fr; }
+  .tiles.row3 .tile:last-child { grid-column: 1 / -1; }
+  .tiles.row3 .tile:last-child .img { aspect-ratio: 2 / 1; }
+}
